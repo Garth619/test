@@ -1,0 +1,59 @@
+// vars/mixins
+
+@import "imports/global/fonts/variables", "imports/global/colors/variables",
+  "imports/global/mediaqueries/variables", "imports/utils/variables-do-not-edit",
+  "imports/utils/mixins-do-not-edit";
+
+// third party files
+
+@import "imports/vendors/slick", "imports/vendors/lity";
+
+// reset
+
+@import "imports/base/reset";
+
+// global
+
+@import "imports/global/content/content", "imports/global/misc/global";
+
+// components
+
+@import "imports/components/video/video", "imports/components/buttons/buttons";
+// "imports/components/internal-forms/internal-content-forms";
+
+// layout
+
+@import "imports/layout/header/header", "imports/layout/navigation/navigation",
+  "imports/layout/internalbanner/internal-banner",
+  "imports/layout/sidebar/sidebar", "imports/layout/footer/footer";
+
+// page templates
+
+@import "imports/templates/homepage/sectionone/section-one",
+  "imports/templates/homepage/sectiontwo/section-two",
+  "imports/templates/homepage/sectionthree/section-three",
+  "imports/templates/homepage/sectionfour/section-four",
+  "imports/templates/homepage/sectionfive/section-five",
+  "imports/templates/homepage/sectionsix/section-six",
+  "imports/templates/homepage/sectionseven/section-seven",
+  "imports/templates/pa-directory/template-pa-directory",
+  "imports/templates/404/not-found",
+  "imports/templates/testimonials/template-testimonials",
+  "imports/templates/about/template-about",
+  "imports/templates/meetteam/template-meetteam",
+  "imports/templates/attorneyprofile/template-attbio",
+  "imports/templates/caseresults/template-results",
+  "imports/templates/videocenter/template-video",
+  "imports/templates/contactpage/template-contact",
+  "imports/templates/blog/template-blog";
+
+// // xd export variables
+
+// @import	"imports/utils/xd_parse/scss/map/_xd_map_placeholder",
+// 		"imports/utils/xd_parse/scss/map/_xd_map",
+// 		"imports/utils/xd_parse/scss/functions/_xd_function",
+// 		"imports/utils/xd_parse/scss/_xd_variables";
+
+// // animations (listed last so it will override styles above
+
+@import "imports/layout/animations";

@@ -1,0 +1,74 @@
+.contact-title-wrapper {
+  @include flex(null, null, column);
+  .large-title {
+    max-width: 400px;
+    @include margin_lr();
+  }
+}
+
+span#contact-description {
+  display: block;
+  margin-top: 25px;
+  max-width: 200px;
+  @include margin_lr();
+  @include type(
+    (
+      size: 16px,
+      height: 19px,
+      family: $primaryfont,
+      color: $color-four,
+      align: center,
+    )
+  );
+  @include mq(small-tablet) {
+    // margin-top: 35px;
+    max-width: 100%;
+  }
+  @include mq(small-laptop) {
+  }
+  @include mq(large-laptop) {
+    font-size: 18px;
+  }
+}
+
+#contact-wrapper {
+  padding-bottom: 20px;
+  @include mq(small-tablet) {
+    @include flex(center);
+  }
+  @include mq(small-laptop) {
+    margin-top: 30px;
+  }
+  @include mq(large-laptop) {
+    margin-top: 39px;
+  }
+  .location-col {
+    margin: 30px 30px 0;
+    @include mq(large-laptop) {
+      margin: 30px 88px 0;
+    }
+  }
+  span {
+    &.location-title {
+      color: $color-one;
+    }
+    &.location-address {
+      color: $color-four;
+    }
+    &.location-phone {
+      color: $color-four;
+      a {
+        color: $color-one;
+      }
+    }
+  }
+  .button-two {
+    border: 2px solid $color-four;
+    color: $color-four;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color-one;
+      border: 2px solid $color-one;
+    }
+  }
+}

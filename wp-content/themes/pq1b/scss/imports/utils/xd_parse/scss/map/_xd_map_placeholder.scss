@@ -1,0 +1,7 @@
+// Before the map gets generated in _xd_map.scss there needs to a variable of $xd_map defined as a fallback so the site doesn't break, this $xd_map map below will get overidden once _xd_map.scss is generated in the command line
+
+$xd_map: (
+  start: (
+    hello: world,
+  ),
+);

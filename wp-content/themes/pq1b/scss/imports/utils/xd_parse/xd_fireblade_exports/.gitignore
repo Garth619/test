@@ -1,0 +1,5 @@
+# ignore all of the assets from fireblade exports except css files
+*/**/
+*/**
+!*.css
+

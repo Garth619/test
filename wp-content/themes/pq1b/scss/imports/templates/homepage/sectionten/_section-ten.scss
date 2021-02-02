@@ -1,0 +1,235 @@
+#section-ten {
+  background: $color-light-two;
+  padding: 50px 45px;
+  @include mq(small-laptop) {
+    padding: 62px 95px;
+  }
+  @include mq(large-laptop) {
+    padding: 89px 75px 89px 105px;
+  }
+  @include mq(small-monitor) {
+    padding: 105px 75px;
+  }
+}
+
+#sec-ten-inner {
+  @include mq(small-laptop) {
+    @include flex();
+  }
+  @include mq(small-monitor) {
+    max-width: 1650px;
+    @include margin_lr();
+  }
+}
+
+#sec-ten-top {
+  text-align: center;
+  @include mq(small-laptop) {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    text-align: left;
+    margin-right: 65px;
+  }
+  @include mq(large-laptop) {
+    flex-basis: 335px;
+  }
+  @include mq(small-monitor) {
+    flex-basis: 380px;
+    margin-right: 45px;
+  }
+}
+
+span#sec-ten-title {
+  display: block;
+  max-width: 225px;
+  margin-bottom: 13px;
+  @include margin_lr();
+  @include type(
+    (
+      size: 35px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-dark-three,
+      weight: 500,
+    )
+  );
+  @include mq(small-tablet) {
+    max-width: 100%;
+  }
+  @include mq(small-laptop) {
+    margin-bottom: 30px;
+  }
+  @include mq(small-monitor) {
+    margin-bottom: 15px;
+  }
+}
+
+#sec-ten-content {
+  max-width: 350px;
+  @include margin_lr();
+  @include mq(small-tablet) {
+    max-width: 480px;
+  }
+  &.content {
+    color: #62676d;
+    @include mq(small-tablet) {
+      @include quick_type(14px, 25px, null);
+    }
+    @include mq(small-laptop) {
+      @include quick_type(17px, 30px, null);
+    }
+    @include mq(large-laptop) {
+      @include quick_type(17px, 25px, null);
+    }
+    @include mq(small-monitor) {
+      @include quick_type(17px, 30px, null);
+    }
+  }
+  p {
+  }
+}
+
+#sec-ten-bottom {
+  @include mq(small-laptop) {
+    width: calc(100% - 365px);
+    margin-top: 65px;
+  }
+  @include mq(large-laptop) {
+    margin-top: 42px;
+    width: calc(100% - 400px);
+  }
+  @include mq(small-monitor) {
+    width: calc(100% - 425px);
+  }
+}
+
+#sec-ten-slide-wrapper {
+  min-height: 141px;
+  @include mq(small-tablet) {
+    padding-top: 10px;
+    max-width: 685px;
+    min-height: 103px;
+    @include margin_lr();
+    @include flex(space-between, center);
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
+  @include mq(small-monitor) {
+    height: 103px;
+    min-height: 93px;
+  }
+}
+
+#sec-ten-slider {
+  @include mq(small-tablet) {
+    width: calc(100% - 145px);
+    @include margin_lr();
+  }
+  .slick-slide {
+    margin: 0 10px;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+  .slick-dots {
+    position: static;
+    margin-top: 25px;
+    li.slick-active {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li {
+      margin: 0;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          opacity: 1;
+          color: #62676d;
+          font-size: 28px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.sec-ten-slide {
+  height: 90px;
+  .sec-ten-slide-inner {
+    @include flex(center, center);
+    height: 100%;
+    svg,
+    img {
+      @include image();
+      margin: auto;
+      max-height: 90px;
+    }
+  }
+}
+
+.sec-ten-arrow {
+  display: none;
+  @include mq(small-tablet) {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .sec-ten-arrow-inner {
+    border-radius: 50%;
+    position: relative;
+    background: #d6d9dd;
+    @include box(36px);
+    @include flex(center, center);
+    @include mq(small-laptop) {
+      background: transparent;
+    }
+    &:before {
+      background: #62676d;
+      transition: all 200ms ease-in-out;
+      border-radius: 50%;
+      @include contentdisplay();
+      @include box(30px);
+      @include mq(small-laptop) {
+        @include box(36px);
+      }
+    }
+  }
+  &:hover {
+    @include mq(small-tablet) {
+      .sec-ten-arrow-inner {
+        &:before {
+          background: #8c949d;
+        }
+      }
+    }
+  }
+  svg {
+    @include abs(11px, null, null, 13px);
+    @include box(6px, 13px);
+    @include mq(small-laptop) {
+      @include box(10px, 16px);
+      @include abs(9px, null, null, 11px);
+    }
+  }
+}
+
+.sec-ten-arrow-right {
+  svg {
+    @include abs(11px, null, null, 16px);
+    @include mq(small-laptop) {
+      @include abs(9px, null, null, 14px);
+    }
+  }
+}

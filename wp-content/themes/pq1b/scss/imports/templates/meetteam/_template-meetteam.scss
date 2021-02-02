@@ -1,0 +1,139 @@
+#meet-team {
+  max-width: 307px;
+  margin-top: 40px;
+  @include margin_lr;
+  @include mq(large-mobile) {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 0px 30px;
+  }
+  @include mq(small-tablet) {
+    margin-top: 60px;
+  }
+  @include mq(tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include mq(small-laptop) {
+    max-width: 950px;
+    grid-gap: 0px 35px;
+  }
+  @include mq(large-laptop) {
+    max-width: 1304px;
+    margin-top: 90px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  @include mq(small-monitor) {
+    max-width: 1445px;
+  }
+}
+
+.single-att {
+  margin-bottom: 40px;
+  text-align: center;
+  @include mq(small-laptop) {
+    //margin-bottom: 70px;
+  }
+  @include mq(small-monitor) {
+    //margin-bottom: 82px;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &:hover {
+    a {
+      .single-att-profile {
+        &:after {
+          opacity: 1;
+        }
+        img {
+          transform: scale(1.075);
+        }
+      }
+      span.single-att-title {
+        //color: $color-two;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    .single-att-profile {
+      position: relative;
+      overflow: hidden;
+      &.placeholder {
+        &:after {
+          background: rgba(3, 26, 40, 1);
+        }
+      }
+      &:after {
+        opacity: 0;
+        padding: 0 20px;
+        background: rgba(3, 26, 40, 0.74);
+        transition: all 200ms ease-in-out;
+        @include abs(0, null, null, 0);
+        @include box(100%);
+        @include contentdisplay(block, "View Attorney Profile");
+        @include flex(center, center);
+        @include type(
+          (
+            size: 15px,
+            height: 18px,
+            spacing: 1.5px,
+            color: $color-seven,
+            family: $primaryfont,
+            weight: 800,
+            align: center,
+            transform: uppercase,
+          )
+        );
+      }
+      img {
+        @include image();
+        width: 100%;
+        transform: scale(1);
+        transition: all 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      }
+    }
+    span {
+      display: block;
+      &.single-att-title {
+        padding-top: 15px;
+        padding-bottom: 5px;
+        transition: all 200ms ease-in-out;
+        @include type(
+          (
+            size: 16px,
+            color: $color-four,
+            height: 19px,
+            spacing: 1px,
+            family: $primaryfont,
+            weight: 700,
+            transform: uppercase,
+          )
+        );
+        @include mq(large-laptop) {
+          @include quick_type(18px, 21px, null);
+        }
+        @include mq(small-monitor) {
+          padding-top: 17px;
+          padding-bottom: 9px;
+        }
+      }
+      &.single-att-position {
+        @include type(
+          (
+            size: 16px,
+            height: 18px,
+            family: $primaryfont,
+            color: $color-two,
+          )
+        );
+        @include mq(large-laptop) {
+          margin-top: 8px;
+          @include quick_type(17px, 20px, null);
+        }
+      }
+    }
+  }
+}

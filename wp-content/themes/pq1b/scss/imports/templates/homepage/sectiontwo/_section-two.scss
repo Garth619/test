@@ -1,0 +1,390 @@
+#section-two {
+  background: $color-six;
+  position: relative;
+  z-index: 1;
+}
+
+#sec-two-inner {
+  @include mq(small-tablet) {
+    @include flex();
+    margin-right: 30px;
+    height: 280px;
+    max-width: 850px;
+    @include margin_lr();
+  }
+  @include mq(small-laptop) {
+    height: 380px;
+    max-width: 100%;
+  }
+  @include mq(large-laptop) {
+    height: 420px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1920px;
+  }
+}
+
+#sec-two-left {
+  padding: 24px 32px;
+  @include mq(small-tablet) {
+    padding: 53px 50px 53px 36px;
+    flex-grow: 1;
+  }
+  @include mq(small-laptop) {
+    padding: 70px 90px 65px 69px;
+  }
+  @include mq(large-laptop) {
+    padding: 70px 87px 65px 79px;
+  }
+  @include mq(large-laptop) {
+    padding: 70px 87px 65px 108px;
+  }
+  @include mq(small-monitor) {
+    padding: 70px 187px 65px 160px;
+  }
+}
+
+#sec-two-left-inner {
+  max-width: 490px;
+  @include margin_lr();
+  @include flex(space-between);
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
+}
+
+.sec-two-single-post {
+  flex-basis: 45%;
+  &:hover {
+    span.learn-more {
+      color: $color-two;
+      border-top: 2px solid $color-two;
+    }
+  }
+  @include mq(small-laptop) {
+    flex-basis: 28%;
+  }
+  @include mq(large-laptop) {
+    flex-basis: 26%;
+  }
+  @include mq(small-monitor) {
+    flex-basis: 24%;
+  }
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    display: none;
+  }
+  &:nth-of-type(3) {
+    @include mq(small-laptop) {
+      display: block;
+    }
+  }
+  a.single-cat-title {
+    background: $color-two;
+    display: inline-block;
+    padding: 7px 54px 5px 10px;
+    height: 24px;
+    @include type(
+      (
+        size: 10px,
+        height: 12px,
+        spacing: 1px,
+        family: $primaryfont,
+        color: $color-seven,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+    @include mq(small-laptop) {
+      font-size: 13px;
+      width: 100%;
+      letter-spacing: 2.6px;
+    }
+  }
+  a.single-post-content {
+    @include type(
+      (
+        size: 12px,
+        height: 17px,
+        family: $primaryfont,
+        color: $color-eight,
+      )
+    );
+    @include mq(small-laptop) {
+      @include quick_type(15px, 22px, null);
+    }
+    @include mq(large-laptop) {
+      @include quick_type(17px, 25px, null);
+    }
+    @include mq(small-monitor) {
+      @include quick_type(20px, 30px, null);
+    }
+  }
+  span {
+    &.single-content {
+      margin-top: 8px;
+      display: block;
+      @include mq(small-laptop) {
+        margin-top: 12px;
+      }
+      @include mq(large-laptop) {
+        margin-top: 23px;
+      }
+    }
+    &.learn-more {
+      display: block;
+      margin: 11px 0 0 0;
+      padding-top: 9px;
+      border-top: 2px solid $color-one;
+      transition: all 200ms ease-in-out;
+      @include type(
+        (
+          size: 10px,
+          spacing: 1px,
+          family: $primaryfont,
+          color: $color-one,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+      @include mq(small-laptop) {
+        margin-top: 40px;
+        font-size: 14px;
+        padding-top: 18px;
+      }
+      @include mq(large-laptop) {
+        margin-top: 20px;
+      }
+      @include mq(small-monitor) {
+        margin-top: 25px;
+        padding-top: 22px;
+      }
+    }
+  }
+}
+
+.sec-two-button {
+  margin-top: 15px;
+  @include mq(small-tablet) {
+    margin-top: 45px;
+  }
+  @include mq(small-laptop) {
+    display: none;
+  }
+}
+#sec-two-right {
+  @include mq(small-tablet) {
+    width: 260px;
+    flex-shrink: 0;
+    margin-right: 35px;
+  }
+  @include mq(small-laptop) {
+    width: 387px;
+    margin-right: 75px;
+  }
+  @include mq(large-laptop) {
+    margin-right: 104px;
+  }
+  @include mq(small-monitor) {
+    margin-right: 92px;
+    width: 434px;
+  }
+}
+
+#sec-two-right-inner {
+  background: $color-four;
+  position: relative;
+  padding: 36px 21px 23px;
+  min-height: 255px;
+  @include mq(small-tablet) {
+    margin-top: -65px;
+    min-height: 307px;
+  }
+  @include mq(small-laptop) {
+    margin-top: -140px;
+    padding: 75px 21px 48px;
+    min-height: 447px;
+  }
+  @include mq(large-laptop) {
+    margin-top: -99px;
+  }
+}
+
+span#sec-two-title {
+  display: block;
+  @include type(
+    (
+      size: 14px,
+      height: 16px,
+      spacing: 2.52px,
+      family: $primaryfont,
+      weight: 700,
+      color: $color-one,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  @include mq(small-laptop) {
+    @include quick_type(17px, 19px, null);
+  }
+  &:after {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    @include margin_lr();
+    @include box(162px, 1px);
+    @include contentdisplay();
+    @include mq(small-laptop) {
+      margin-top: 28px;
+      @include box(245px, 1px);
+    }
+  }
+}
+
+#sec-two-slider-wrapper {
+  margin-top: 25px;
+  @include mq(small-tablet) {
+    margin-top: 42px;
+  }
+}
+
+#sec-two-slider {
+}
+
+.sec-two-single-slide {
+  span {
+    display: block;
+    color: $color-seven;
+    text-align: center;
+    font-family: $primaryfont;
+    &.sec-two-slide-title {
+      font-weight: 700;
+      max-width: 280px;
+      @include margin_lr();
+      @include quick_type(22px, 30px, 0);
+      @include mq(small-tablet) {
+        max-width: 100%;
+        padding: 0px 30px;
+        @include quick_type(25px, 30px, 0);
+      }
+      @include mq(small-laptop) {
+        padding: 0px 50px;
+        @include quick_type(40px, 50px, 0);
+      }
+    }
+    &.sec-two-slide-content {
+      margin-top: 13px;
+      max-width: 207px;
+      @include margin_lr();
+      @include quick_type(13px, 17px, 0.26px);
+      @include mq(small-tablet) {
+        @include quick_type(14px, 20px, 0.26px);
+      }
+      @include mq(small-laptop) {
+        margin-top: 25px;
+        max-width: 267px;
+        @include quick_type(18px, 24px, null);
+      }
+    }
+  }
+}
+
+#sec-two-mobile-arrows {
+  max-width: 318px;
+  @include margin_lr();
+  @include flex(space-between);
+  @include mq(small-tablet) {
+    display: none;
+  }
+}
+
+.sec-two-mobile-arrow {
+  background: $color-seven;
+  margin-top: 36px;
+  cursor: pointer;
+  @include box(calc(50% - 1px), 26px);
+  @include flex(center, center);
+  &:after {
+    @include contentdisplay();
+  }
+}
+
+.sec-two-mobile-arrow-left {
+  &:hover {
+    &:after {
+      @include tri(left, 6px, 6px, $color-two);
+    }
+  }
+  &:after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(left, 6px, 6px, $color-one);
+  }
+}
+
+.sec-two-mobile-arrow-right {
+  &:hover {
+    &:after {
+      @include tri(right, 6px, 6px, $color-two);
+    }
+  }
+  &:after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(right, 6px, 6px, $color-one);
+  }
+}
+
+.sec-two-tablet-arrow {
+  background: $color-seven;
+  position: absolute;
+  display: none;
+  box-shadow: 0px 1px 10px #021b2880;
+  top: 130px;
+  @include box(35px, 52px);
+  @include mq(small-tablet) {
+    @include flex(center, center);
+  }
+  @include mq(small-laptop) {
+    top: 183px;
+    @include box(44px, 65px);
+  }
+  &:after {
+    @include contentdisplay();
+  }
+}
+
+.sec-two-tablet-arrow-left {
+  left: -15px;
+  &:hover {
+    &::after {
+      @include tri(left, 7px, 7px, $color-two);
+      @include mq(small-laptop) {
+        @include tri(left, 9px, 9px, $color-two);
+      }
+    }
+  }
+  &::after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(left, 7px, 7px, $color-one);
+    @include mq(small-laptop) {
+      @include tri(left, 9px, 9px, $color-one);
+    }
+  }
+}
+
+.sec-two-tablet-arrow-right {
+  right: -15px;
+  &:hover {
+    &::after {
+      @include tri(right, 7px, 7px, $color-two);
+      @include mq(small-laptop) {
+        @include tri(right, 9px, 9px, $color-two);
+      }
+    }
+  }
+  &::after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(right, 7px, 7px, $color-one);
+    @include mq(small-laptop) {
+      @include tri(right, 9px, 9px, $color-one);
+    }
+  }
+}

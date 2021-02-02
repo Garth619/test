@@ -1,0 +1,158 @@
+body.page-template-template-padirectory {
+  #page-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+#pa-directory {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  @include mq(large-laptop) {
+    padding: 22px 0;
+  }
+  ul {
+    list-style: none;
+  }
+  ul.pa_directory_top_menu {
+    > li {
+      margin-bottom: 25px;
+      @include mq(large-laptop) {
+        margin-bottom: 55px;
+      }
+      &:nth-child(even) {
+        background: $color-six;
+        padding: 30px 0 10px;
+        margin-bottom: 35px;
+        @include mq(small-tablet) {
+          padding: 50px 0 20px;
+          margin-bottom: 50px;
+        }
+        @include mq(large-laptop) {
+          padding: 103px 0 65px;
+        }
+      }
+      &:nth-child(odd) {
+        &:not(:first-of-type) {
+          @include mq(large-laptop) {
+            padding: 59px 0 35px;
+          }
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+        div {
+          padding-bottom: 0;
+        }
+      }
+      > a {
+        display: block;
+        padding: 0px 40px;
+        @include type(
+          (
+            size: 19px,
+            height: 22px,
+            family: $primaryfont,
+            color: $color-four,
+            weight: 900,
+            align: center,
+          )
+        );
+        @include mq(large-laptop) {
+          @include quick_type(25px, 28px, null);
+        }
+        &::after {
+          background: $color-one;
+          margin-top: 20px;
+          @include contentdisplay();
+          @include margin_lr();
+          @include box(74px, 5px);
+          @include mq(large-laptop) {
+            margin-top: 40px;
+          }
+        }
+      }
+      > div {
+        margin-top: 30px;
+        @include mq(small-tablet) {
+          margin-top: 30px;
+          padding: 20px 0px;
+        }
+        @include mq(large-laptop) {
+          margin-top: 16px;
+        }
+        ul {
+          max-width: 300px;
+          @include margin_lr();
+          @include mq(small-tablet) {
+            max-width: 590px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-rows: auto;
+            grid-gap: 0px 30px;
+            @include mq(small-laptop) {
+              max-width: 1190px;
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @include mq(large-laptop) {
+              max-width: 1190px;
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+              grid-gap: 0px 40px;
+            }
+            @include mq(small-monitor) {
+              max-width: 1590px;
+            }
+          }
+          li {
+            border-bottom: 1px solid #b2b9b9;
+            @include type(
+              (
+                size: 17px,
+                height: 22px,
+                family: $primaryfont,
+                color: $color-four,
+                align: center,
+                transform: lowercase,
+              )
+            );
+            @include mq(large-laptop) {
+              @include quick_type(19px, 23px, null);
+            }
+            &:last-of-type {
+              border: none;
+            }
+            &:nth-last-of-type(-n + 2) {
+              @include mq(small-tablet) {
+                border: none;
+              }
+            }
+            &:nth-last-of-type(-n + 3) {
+              @include mq(small-laptop) {
+                border: none;
+              }
+            }
+            &:nth-last-of-type(-n + 4) {
+              @include mq(large-laptop) {
+                border: none;
+              }
+            }
+            a {
+              padding: 16px 10px;
+              display: block;
+              color: $color-four;
+              text-decoration: none;
+              transition: all 200ms ease-in-out;
+              @include mq(large-laptop) {
+                padding: 24px 10px;
+              }
+              &:hover {
+                color: $color-two;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

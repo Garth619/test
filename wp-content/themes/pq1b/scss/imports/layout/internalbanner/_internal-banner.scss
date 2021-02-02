@@ -1,0 +1,81 @@
+#internal-banner {
+  padding: 27px 40px;
+  position: relative;
+  overflow: hidden;
+  @include mq(small-tablet) {
+    padding: 48px 40px 30px;
+  }
+  @include mq(small-laptop) {
+    height: 307px;
+    @include flex(center, center);
+  }
+  @include mq(large-laptop) {
+    height: 381px;
+  }
+}
+
+body.page-template-default {
+  #internal-banner {
+    display: none;
+    @include mq(small-laptop) {
+      display: block;
+    }
+  }
+}
+
+#internal-banner-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  @include mq(small-laptop) {
+    max-width: 1020px;
+    height: 100%;
+    @include flex(center, center);
+    @include margin_lr();
+  }
+}
+
+.page-title {
+  display: inline-block;
+  &.banner-title {
+    @include mq(small-laptop) {
+      padding: 0px 70px;
+      @include type(
+        (
+          size: 45px,
+          height: 56px,
+          family: $primaryfont,
+          color: $color-seven,
+          align: center,
+          weight: 700,
+        )
+      );
+      &::after {
+        @include mq(small-laptop) {
+          display: none;
+        }
+      }
+    }
+  }
+  &.large-title {
+    @include mq(small-laptop) {
+      font-size: 50px;
+    }
+    @include mq(large-laptop) {
+      font-size: 60px;
+    }
+    @include mq(small-monitor) {
+      font-size: 65px;
+    }
+  }
+}
+
+img#banner-img {
+  display: none;
+  object-fit: cover;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  @include mq(small-laptop) {
+    display: block;
+  }
+}

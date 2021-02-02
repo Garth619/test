@@ -1,0 +1,189 @@
+nav {
+  background: $color-four;
+  padding: 12px 40px;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  @include fixed(94px, 0, null, null);
+  @include box(100%, 100vh);
+  @include mq(small-tablet) {
+    max-width: 307px;
+  }
+  @include mq(small-laptop) {
+    position: static;
+    max-width: 100%;
+    opacity: 1;
+    visibility: visible;
+    padding: 38px 40px 0;
+    overflow: visible;
+    @include box(auto);
+  }
+  @include mq(large-laptop) {
+    padding: 38px 85px 0 40px;
+  }
+  ul {
+    list-style: none;
+    li {
+      @include type(
+        (
+          size: 15px,
+          height: 17px,
+          spacing: 0.38px,
+          family: $primaryfont,
+          color: $color-seven,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+      @include mq(large-laptop) {
+        @include quick_type(17px, 20px, null);
+      }
+      &.menu-item-has-children {
+        &.active {
+          > a {
+            color: $color-two;
+            &:after {
+              @include tri(down, 4px, 7px, $color-two);
+            }
+          }
+        }
+        &:hover {
+          > ul.sub-menu {
+            @include mq(small-laptop) {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        > a {
+          position: relative;
+          &:after {
+            transition: all 300ms ease-in-out;
+            @include abs(21px, 10px, null, null);
+            @include contentdisplay();
+            @include tri(down, 4px, 7px, $color-seven);
+            @include mq(small-laptop) {
+              position: static;
+              display: inline-block;
+              vertical-align: top;
+              margin-top: 4px;
+              margin-left: 5px;
+            }
+            @include mq(large-laptop) {
+              margin-top: 7px;
+            }
+          }
+        }
+      }
+      &.current-menu-ancestor {
+        > a {
+          color: $color-two;
+          &:after {
+            @include tri(down, 4px, 7px, $color-two);
+          }
+        }
+      }
+      &.current-menu-item {
+        > a {
+          color: $color-two;
+        }
+      }
+      a {
+        color: $color-seven;
+        text-decoration: none;
+        display: block;
+        padding: 16px 0;
+        transition: color 300ms ease-in-out;
+        border-bottom: 1px solid $color-three;
+      }
+    }
+  }
+  ul.menu {
+    padding-bottom: 100px;
+    @include mq(small-laptop) {
+      padding-bottom: 0;
+    }
+    > li {
+      @include mq(small-laptop) {
+        display: inline-block;
+        position: relative;
+        margin-left: 35px;
+        padding-bottom: 34px;
+      }
+      @include mq(large-laptop) {
+        padding-bottom: 31px;
+      }
+      &:hover {
+        @include mq(small-laptop) {
+          > a {
+            color: $color-two;
+            &:after {
+              @include tri(down, 4px, 7px, $color-two);
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        ul.sub-menu {
+          left: auto;
+          right: 0;
+          transform: translateX(0);
+        }
+        a {
+          border-bottom: none;
+        }
+      }
+      > a {
+        @include mq(small-laptop) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  ul.sub-menu {
+    display: none;
+    @include mq(small-laptop) {
+      display: block !important;
+      width: 306px;
+      background: $color-four;
+      padding: 15px 37px 12px;
+      border-top: 4px solid $color-two;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+      @include abs(83px, null, null, 50%);
+    }
+    li {
+      &:last-of-type {
+        a {
+          @include mq(small-laptop) {
+            border-bottom: none;
+          }
+        }
+      }
+      a {
+        &:hover {
+          color: $color-two;
+        }
+      }
+    }
+  }
+}
+
+.nav-tablet {
+  transform: translate(0, -30px);
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
+    transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  @include mq(small-tablet) {
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
+      transform 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transform: translate(100%, 0px);
+  }
+  &.nav-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+  }
+}

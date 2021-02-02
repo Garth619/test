@@ -1,0 +1,81 @@
+body.page-template-template-caseresults {
+  #page-container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+#case-results-wrapper {
+  padding: 40px 0 0;
+  @include mq(small-tablet) {
+    padding-top: 55px;
+  }
+  @include mq(small-laptop) {
+    padding-top: 75px;
+  }
+  @include mq(large-laptop) {
+    padding-top: 113px;
+  }
+}
+
+.single-case-result {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 40px;
+  @include mq(small-tablet) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @include mq(large-laptop) {
+    margin-bottom: 77px;
+  }
+  &:nth-child(even) {
+    background: $color-six;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    @include mq(large-laptop) {
+      padding-top: 76px;
+      padding-bottom: 76px;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  .single-case-result-inner {
+    @include mq(small-laptop) {
+      max-width: 945px;
+      @include margin_lr();
+    }
+  }
+  span.single-case-result-title {
+    @include type(
+      (
+        size: 20px,
+        height: 30px,
+        family: $primaryfont,
+        color: $color-four,
+        weight: 900,
+      )
+    );
+    @include mq(large-laptop) {
+      @include quick_type(25px, 35px, null);
+    }
+    &::after {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background: $color-one;
+      @include box(100%, 5px);
+      @include contentdisplay();
+      @include mq(large-laptop) {
+        margin-top: 30px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .single-case-result-content {
+    &.content {
+      font-size: 18px;
+    }
+  }
+}

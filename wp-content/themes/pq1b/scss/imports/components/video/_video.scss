@@ -1,0 +1,93 @@
+.pq-video {
+  position: relative;
+  &:hover {
+    .pq-video-img {
+      img {
+        transform: scale(1.1);
+      }
+      .pq-video-overlay {
+        span.pq-play-button {
+          &::after {
+            @include tri(right, 8px, 9px, $color-two);
+            @include mq(large-laptop) {
+              @include tri(right, 10px, 11px, $color-two);
+            }
+            @include mq(small-monitor) {
+              @include tri(right, 12px, 13px, $color-two);
+            }
+          }
+        }
+      }
+    }
+  }
+  .mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 1);
+  }
+  .pq-video-img {
+    overflow: hidden;
+    img {
+      @include image();
+      width: 100%;
+      transform: scale(1);
+      transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    }
+    .pq-video-overlay {
+      @include box(100%);
+      @include abs(0, null, null, 0);
+      @include flex(center, center);
+      span.pq-play-button {
+        display: block;
+        position: relative;
+        background: rgba(255, 255, 255, 50%);
+        border-radius: 50%;
+        @include flex(center, center);
+        @include box(74px);
+        @include mq(small-tablet) {
+          @include box(88px);
+        }
+        @include mq(large-laptop) {
+          @include box(100px);
+        }
+        @include mq(small-monitor) {
+          @include box(122px);
+        }
+        &::before {
+          background: $color-four;
+          border-radius: 50%;
+          @include box(59px);
+          @include contentdisplay();
+          @include mq(small-tablet) {
+            @include box(69px);
+          }
+          @include mq(large-laptop) {
+            @include box(79px);
+          }
+          @include mq(small-monitor) {
+            @include box(97px);
+          }
+        }
+        &::after {
+          transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+          @include abs(29px, null, null, 34px, 1);
+          @include contentdisplay();
+          @include tri(right, 8px, 9px, $color-one);
+          @include mq(small-tablet) {
+            top: 36px;
+            left: 41px;
+          }
+          @include mq(large-laptop) {
+            top: 38px;
+            left: 46px;
+            @include tri(right, 10px, 11px, $color-one);
+          }
+          @include mq(small-monitor) {
+            top: 47px;
+            left: 56px;
+            @include tri(right, 12px, 13px, $color-one);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+#section-seven {
+  background: $color-six;
+  padding: 55px 25px 35px;
+  @include mq(small-tablet) {
+    padding: 70px 125px 42px;
+  }
+  @include mq(small-laptop) {
+    padding: 90px 120px 85px;
+  }
+  @include mq(large-laptop) {
+    padding: 90px 120px 135px;
+  }
+  @include mq(small-monitor) {
+    padding: 137px 120px 135px;
+  }
+}
+
+#sec-seven-inner {
+  @include mq(small-monitor) {
+    max-width: 1500px;
+    position: relative;
+    @include margin_lr();
+  }
+}
+
+#sec-seven-tile-wrapper {
+  @include mq(small-monitor) {
+    margin-left: 98px;
+    margin-right: 63px;
+    @include flex(flex-end);
+  }
+}
+
+span#sec-seven-title {
+  display: block;
+  max-width: 490px;
+  @include margin_lr();
+  @include type(
+    (
+      size: 30px,
+      height: 40px,
+      family: $primaryfont,
+      color: $color-four,
+      weight: 700,
+      align: center,
+    )
+  );
+  @include mq(small-tablet) {
+    max-width: 501px;
+    @include margin_lr();
+    @include quick_type(40px, 45px, null);
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
+    @include quick_type(48px, 60px, null);
+  }
+  @include mq(small-monitor) {
+    text-align: left;
+    width: calc(100% - 721px);
+    @include margin_lr(0);
+  }
+  br {
+    @include mq(small-laptop) {
+      display: none;
+    }
+    @include mq(small-monitor) {
+      display: inline-block;
+    }
+  }
+  &::after {
+    margin-top: 25px;
+    background: $color-one;
+    @include box(100%, 3px);
+    @include contentdisplay();
+    @include mq(small-tablet) {
+      margin-top: 27px;
+    }
+    @include mq(small-laptop) {
+      max-width: 518px;
+      margin-top: 25px;
+      @include margin_lr();
+    }
+    @include mq(small-monitor) {
+      margin-top: 18px;
+      max-width: 100%;
+    }
+  }
+}
+
+#sec-seven-content-wrapper {
+  @include mq(small-laptop) {
+    margin-top: 60px;
+    @include flex(space-between);
+  }
+  @include mq(small-monitor) {
+    margin-top: 40px;
+  }
+}
+
+#sec-seven-top,
+#sec-seven-bottom {
+  // padding: 0px 15px;
+}
+
+#sec-seven-top {
+  margin-top: 22px;
+  max-width: 355px;
+  @include margin_lr();
+  @include mq(small-tablet) {
+    margin-top: 33px;
+  }
+  @include mq(small-laptop) {
+    flex-shrink: 0;
+    margin-top: 0;
+    max-width: 100%;
+    width: 425px;
+  }
+  @include mq(large-laptop) {
+    width: 520px;
+  }
+  @include mq(small-monitor) {
+    width: 721px;
+  }
+}
+
+#sec-seven-intro {
+  margin-top: 25px;
+  @include type(
+    (
+      size: 17px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-two,
+      weight: 700,
+    )
+  );
+  @include mq(small-tablet) {
+    margin-top: 40px;
+    @include quick_type(18px, 25px, null);
+  }
+  @include mq(small-laptop) {
+    margin-top: 0px;
+    @include quick_type(20px, 30px, null);
+  }
+  @include mq(large-laptop) {
+    @include quick_type(22px, 30px, null);
+  }
+}
+
+#sec-seven-img-wrapper {
+  overflow: hidden;
+  @include mq(small-tablet) {
+    max-width: 398px;
+    @include margin_lr();
+  }
+  @include mq(large-laptop) {
+    max-width: 100%;
+  }
+  @include mq(small-monitor) {
+    @include abs(0, null, null, 0);
+  }
+  img {
+    @include image();
+    width: 100%;
+  }
+}
+
+#sec-seven-bottom {
+  @include mq(small-laptop) {
+    margin-left: 47px;
+    flex-grow: 1;
+  }
+  @include mq(small-monitor) {
+    margin-left: 98px;
+    margin-right: 63px;
+  }
+}

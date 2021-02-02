@@ -1,0 +1,117 @@
+.content {
+  .gform_wrapper {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    ul {
+      padding: 0;
+      li {
+        padding: 0;
+        margin-bottom: 20px;
+        &:before {
+          display: none;
+        }
+        h2:not(.page_header):not(.blog_header) {
+          padding-top: 25px;
+          padding-bottom: 0px;
+        }
+        span.form_small_title {
+          text-transform: uppercase;
+        }
+        a.form_privacy_policy {
+          text-decoration: underline;
+        }
+        label {
+          display: none;
+          margin-bottom: 10px;
+          span.gfield_required {
+            margin-left: 5px;
+          }
+        }
+        .ginput_container {
+          > input,
+          textarea {
+            width: 100%;
+            max-width: 425px;
+          }
+          input,
+          textarea,
+          select {
+            padding: 12px 15px;
+            max-width: 425px;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #d4d5d6;
+            @include type(
+              (
+                size: 14px,
+                family: $primaryfont,
+                color: #62676d,
+                weight: 600,
+              )
+            );
+            &:focus {
+              background: $color-light-one;
+              color: #9c9e9f;
+            }
+          }
+          select {
+            -webkit-appearance: none;
+          }
+          ul {
+            margin-bottom: 0;
+            li {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      li#field_5_18 {
+        > label {
+          display: none;
+        }
+      }
+    }
+    ul.gfield_checkbox,
+    ul.gfield_radio {
+      > li {
+        display: flex;
+        align-items: center;
+        input,
+        textarea {
+          width: auto;
+          max-width: auto;
+        }
+        label {
+          display: block;
+          margin-top: 8px;
+          margin-left: 10px;
+        }
+      }
+    }
+    .gform_footer {
+      margin-top: 35px;
+      margin-left: 0;
+      margin-right: 0;
+      input[type="submit"] {
+        font-size: 18px;
+        padding: 15px 30px;
+        cursor: pointer;
+      }
+    }
+    .gfield_description,
+    .validation_message {
+      margin-top: 4px;
+      @include type(
+        (
+          size: 11px,
+          height: 18px,
+          family: $primaryfont,
+          color: $color-bright-two,
+          weight: 800,
+          spacing: 0.3px,
+          transform: uppercase,
+        )
+      );
+    }
+  }
+}

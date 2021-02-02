@@ -1,0 +1,108 @@
+#section-five {
+  padding: 50px 40px 35px;
+  @include mq(small-tablet) {
+    padding: 65px 95px 45px;
+  }
+  @include mq(small-laptop) {
+    padding: 113px 129px 55px;
+  }
+  @include mq(large-laptop) {
+    padding: 161px 129px 113px;
+  }
+  @include mq(small-monitor) {
+    padding: 201px 129px 113px;
+  }
+}
+
+#sec-five-inner {
+  @include mq(small-laptop) {
+    @include flex(space-between);
+  }
+  @include mq(small-monitor) {
+    max-width: 1400px;
+    @include margin_lr();
+  }
+}
+
+.sec-five-col {
+  flex-basis: calc(50% - 40px);
+  @include mq(small-monitor) {
+    flex-basis: calc(50% - 80px);
+  }
+}
+
+#sec-five-intro {
+  @include type(
+    (
+      size: 17px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-two,
+      weight: 700,
+    )
+  );
+  @include mq(small-tablet) {
+    @include quick_type(18px, 25px, null);
+  }
+  @include mq(small-laptop) {
+    @include quick_type(20px, 30px, null);
+  }
+  @include mq(large-laptop) {
+    @include quick_type(22px, null, null);
+  }
+}
+
+#sec-five-quote {
+  @include mq(small-laptop) {
+    margin-top: -60px;
+  }
+  svg {
+    @include margin_lr();
+    @include image();
+  }
+  span#sec-five-quote-content {
+    display: block;
+    margin-top: -42px;
+    @include type(
+      (
+        size: 20px,
+        height: 30px,
+        family: $primaryfont,
+        weight: 700,
+        align: center,
+      )
+    );
+    @include mq(small-tablet) {
+      max-width: 500px;
+      @include margin_lr();
+      @include quick_type(24px, 35px, null);
+    }
+    @include mq(small-laptop) {
+      margin-top: -35px;
+    }
+    @include mq(large-laptop) {
+      @include quick_type(27px, 40px, null);
+    }
+    @include mq(small-monitor) {
+      max-width: 100%;
+    }
+    &::after {
+      margin-top: 45px;
+      margin-bottom: 28px;
+      background: $color-one;
+      //margin-left: -20px;
+      @include box(100%, 3px);
+      //@include box(calc(100% + 40px), 3px);
+      @include contentdisplay();
+      @include mq(small-tablet) {
+        margin-top: 55px;
+      }
+      @include mq(small-laptop) {
+        margin-top: 35px;
+      }
+      @include mq(large-laptop) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

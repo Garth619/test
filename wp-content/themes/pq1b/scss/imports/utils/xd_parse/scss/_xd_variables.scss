@@ -1,0 +1,112 @@
+
+
+/////////////////////////////////////////////////////////////////////
+// Section Four
+////////////////////////////////////////////////////////////////////
+
+// #sec_four_testi 
+
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testiline", "fill") {
+    $accent_color:xd-export($xd_map, "hd1920-s5testimonials-testiline", "fill");
+}
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testibkg", "fill") {
+    $sec_four_testi_bg_color: xd-export($xd_map, "hd1920-s5testimonials-testibkg", "fill");
+}
+
+// .span.testi_title
+
+$sec_four_testi_title_color: $color_lite_one;
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testititle", "font-weight") {
+    $sec_four_testi_title_weight: xd-export($xd_map, "hd1920-s5testimonials-testititle", "font-weight");
+}
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testititle", "font-size") {
+    $sec_four_testi_title_size: xd-export($xd_map, "hd1920-s5testimonials-testititle", "font-size");
+}
+$sec_four_testi_title_size_small_laptop: 16px;
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testititle", "letter-spacing") {
+
+    $sec_four_testi_title_spacing: xd-export($xd_map, "hd1920-s5testimonials-testititle", "letter-spacing");
+
+} 
+
+// .sec_four_single_testi span.testi_intro
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testiquote", "color") {
+
+    $sec_four_testi_intro_color: xd-export($xd_map, "hd1920-s5testimonials-testiquote", "color");
+
+}
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testiquote", "font-size") {
+
+    $sec_four_testi_intro_size: xd-export($xd_map, "hd1920-s5testimonials-testiquote", "font-size");
+
+}
+$sec_four_testi_intro_size_large_laptop: 32px;
+$sec_four_testi_intro_size_tablet: 26px;
+
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testiquote", "line-height") {
+$sec_four_testi_intro_line_height: xd-export($xd_map, "hd1920-s5testimonials-testiquote", "line-height");
+
+}
+$sec_four_testi_intro_line_height_large_laptop: 35px;
+$sec_four_testi_intro_line_height_tablet: 30px;
+
+
+@if xd-export($xd_map, "hd1920-s5testimonials-testiline", "fill") {
+    $sec_four_line: xd-export($xd_map, "hd1920-s5testimonials-testiline", "fill");
+}
+
+// .sec_four_single_testi span.testi_description
+
+$sec_four_testi_content_color: $color_lite_one;
+
+$sec_four_testi_content_size: 22px;
+$sec_four_testi_content_size_small_laptop: 18px;
+$sec_four_testi_content_size_small_tablet: 16px;
+
+$sec_four_testi_content_spacing: 0.33px;
+
+$sec_four_testi_content_line_height: 41px;
+$sec_four_testi_content_line_height_large_laptop: 35px;
+$sec_four_testi_content_line_height_small_laptop: 32px;
+$sec_four_testi_content_line_height_small_tablet: 30px;
+
+// .sec_four_single_testi span.testi_name
+
+$sec_four_testi_name_color: $color_lite_one;
+
+$sec_four_testi_name_weight: 500;
+
+$sec_four_testi_name_size: 18px;
+$sec_four_testi_name_size_small_laptop: 16px;
+
+$sec_four_testi_name_line_height: 20px;
+
+$sec_four_testi_name_spacing: 0.36px;
+
+// .sec_four_arrow
+
+@if xd-export($xd_map, "hd1920-s5testimonials-arrowl-arrowbkgcolor", "fill") {
+
+$sec_four_button_bg_color: xd-export($xd_map, "hd1920-s5testimonials-arrowl-arrowbkgcolor", "fill");
+
+}
+
+$sec_four_button_bg_color_xlarge_mobile: $color_dark_three;
+
+$sec_four_button_divider_color_xlarge_mobile: $color_dark_one;
+
+$sec_four_button_border_color: $color_dark_three;
+
+$sec_four_arrow_fill_color: $color_lite_one;
+
+$sec_four_button_bg_color_hover: $color_dark_three;
+
+$sec_four_button_border_color_hover: $color_dark_three;

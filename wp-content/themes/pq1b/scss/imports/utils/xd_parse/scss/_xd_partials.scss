@@ -1,0 +1,314 @@
+.sec_four_inner {
+  position: relative;
+}
+
+#sec_four_testi {
+  max-width: 1270px;
+  background: $sec_four_testi_bg_color;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 123px 0;
+  @include mq(large_laptop) {
+    max-width: 948px;
+    padding: 107px 0 76px 0;
+  }
+  @include mq(small_laptop) {
+    max-width: 813px;
+    padding: 78px 0;
+  }
+  @include mq(xsmall_tablet) {
+    margin: 0 80px;
+    max-width: 100%;
+    padding: 81px 0 95px 0;
+  }
+  @include mq(xlarge_mobile) {
+    margin: 0px;
+    padding: 62px 0px 0;
+  }
+  span {
+    display: block;
+  }
+}
+
+.testimonial_bg {
+  display: flex;
+  align-items: center;
+  @include abs(0, null, null, 0);
+  @include box(100%);
+}
+
+.testimonial_bg_inner {
+  position: relative;
+  overflow: hidden;
+  @include box(100%, 562px);
+  @include mq(small_laptop) {
+    height: 467px;
+  }
+  @include mq(xsmall_tablet) {
+    height: 515px;
+  }
+  @include mq(xlarge_mobile) {
+    display: none;
+  }
+  img {
+    object-fit: cover;
+    @include abs(0, null, null, 0);
+    @include box(100%);
+    @include mq(small_tablet) {
+      max-width: 1066px;
+    }
+    @include mq(xsmall_tablet) {
+      //object-position: 0% 90%;
+    }
+  }
+}
+
+span.testi_title {
+  @include type(
+    (
+      size: $sec_four_testi_title_size,
+      spacing: $sec_four_testi_title_spacing,
+      family: $primaryfont,
+      color: $sec_four_testi_title_color,
+      weight: $sec_four_testi_title_weight,
+      align: null,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_laptop) {
+    font-size: $sec_four_testi_title_size_small_laptop;
+  }
+  @include mq(xlarge_mobile) {
+    padding: 0 40px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    background: $accent_color;
+    margin: 57px auto 0;
+    @include box(134px, 4px);
+    @include mq(large_laptop) {
+      margin: 35px auto 0;
+    }
+    @include mq(small_laptop) {
+      margin: 35px auto 0;
+      width: 88px;
+    }
+    @include mq(small_tablet) {
+      margin: 29px auto 0;
+    }
+  }
+}
+
+.sec_four_test_slider {
+  max-width: 840px;
+  margin: 0 auto 0;
+  @include mq(large_laptop) {
+    max-width: 730px;
+  }
+  @include mq(small_laptop) {
+    max-width: 610px;
+  }
+  @include mq(xsmall_tablet) {
+    max-width: 450px;
+  }
+  @include mq(xlarge_mobile) {
+    flex-basis: auto;
+    max-width: 540px;
+    margin: 0 auto;
+    order: 1;
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
+.sec_four_single_testi {
+  padding: 56px 0 0 0;
+  min-height: 370px;
+  @include mq(large_laptop) {
+    min-height: 415px;
+    padding: 50px 0 0 0;
+  }
+  @include mq(small_laptop) {
+    min-height: 345px;
+    padding: 30px 0 0 0;
+  }
+  @include mq(xsmall_tablet) {
+    min-height: auto;
+  }
+  span.testi_intro {
+    max-width: 750px;
+    margin: 0 auto;
+    @include type(
+      (
+        size: $sec_four_testi_intro_size,
+        weight:700,
+        height: $sec_four_testi_intro_line_height,
+        family: $secondaryfont,
+        color: $sec_four_testi_intro_color,
+      )
+    );
+    @include mq(large_laptop) {
+      max-width: 640px;
+      @include quick_type(
+        $sec_four_testi_intro_size_large_laptop,
+        $sec_four_testi_intro_line_height_large_laptop,
+        null
+      );
+    }
+    @include mq(small_laptop) {
+      max-width: 540px;
+      @include quick_type(
+        $sec_four_testi_intro_size_tablet,
+        $sec_four_testi_intro_line_height_tablet,
+        null
+      );
+    }
+    @include mq(tablet) {
+      max-width: 100%;
+    }
+  }
+  span.testi_description {
+    margin-top: 53px;
+    @include type(
+      (
+        size: $sec_four_testi_content_size,
+        weight:200,
+        spacing: $sec_four_testi_content_spacing,
+        height: $sec_four_testi_content_line_height,
+        family: $thirdfont,
+        color: $sec_four_testi_content_color,
+      )
+    );
+    @include mq(large_laptop) {
+      margin-top: 35px;
+      line-height: $sec_four_testi_content_line_height_large_laptop;
+    }
+    @include mq(small_laptop) {
+      max-width: 605px;
+      margin: 36px auto 0;
+      @include quick_type(
+        $sec_four_testi_content_size_small_laptop,
+        $sec_four_testi_content_line_height_small_laptop,
+        null
+      );
+    }
+    @include mq(small_tablet) {
+      @include quick_type(
+        $sec_four_testi_content_size_small_tablet,
+        $sec_four_testi_content_line_height_small_tablet,
+        null
+      );
+    }
+    @include mq(xsmall_tablet) {
+      margin-top: 41px;
+    }
+    @include mq(xlarge_mobile) {
+      margin-top: 30px;
+    }
+  }
+  span.testi_name {
+    margin: 49px 0 0 0;
+    @include type(
+      (
+        size: $sec_four_testi_name_size,
+        spacing: $sec_four_testi_name_spacing,
+        height: $sec_four_testi_name_line_height,
+        family: $primaryfont,
+        color: $sec_four_testi_name_color,
+        weight: $sec_four_testi_name_weight,
+      )
+    );
+    @include mq(large_laptop) {
+      margin: 42px 0 0 0;
+    }
+    @include mq(small_laptop) {
+      margin: 30px 0 0 0;
+      font-size: $sec_four_testi_name_size_small_laptop;
+    }
+    @include mq(xlarge_mobile) {
+      margin: 32px 0 0 0;
+    }
+  }
+}
+
+
+.sec_four_arrow {
+  background: $sec_four_button_bg_color;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px $sec_four_button_bg_color;
+  margin-top: -132px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  @include flex(center, center);
+  @include box(89px);
+  @include mq(large_laptop) {
+    margin-top: -116px;
+  }
+  @include mq(small_laptop) {
+    margin-top: -55px;
+    @include box(65px);
+  }
+  @include mq(xlarge_mobile) {
+    background: $sec_four_button_bg_color_xlarge_mobile;
+    margin: 36px 0 0 0;
+    border-radius: 0px;
+    box-shadow: none;
+    @include box(50%, 73px);
+  }
+  &:hover {
+    background: $sec_four_button_bg_color;
+    box-shadow: 0 0 0 5px $sec_four_button_bg_color;
+    @include mq(xlarge_mobile) {
+      box-shadow: none;
+      background: $sec_four_button_bg_color_xlarge_mobile;
+    }
+    svg {
+      path {
+        fill: $sec_four_arrow_fill_color;
+      }
+    }
+  }
+  svg {
+    @include box(31px, 22px);
+    @include mq(small_laptop) {
+      @include box(26px, 18px);
+    }
+    @include mq(xlarge_mobile) {
+      @include box(31px, 22px);
+    }
+    path {
+      fill: $sec_four_arrow_fill_color;
+      transition: all 200ms ease-in-out;
+    }
+  }
+}
+
+.sec_four_arrow_left {
+  margin-left: -30px;
+  @include mq(xlarge_mobile) {
+    margin-left: 0px;
+    order: 2;
+    border-right: 1px solid $sec_four_button_divider_color_xlarge_mobile;
+  }
+}
+
+.sec_four_arrow_right {
+  margin-right: -30px;
+  @include mq(xlarge_mobile) {
+    order: 3;
+  }
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.testi_inner {
+  @include flex(null, center);
+  @include mq(xlarge_mobile) {
+    flex-wrap: wrap;
+  }
+}

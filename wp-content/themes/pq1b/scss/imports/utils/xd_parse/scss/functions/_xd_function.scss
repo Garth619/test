@@ -1,0 +1,14 @@
+
+// This function will map through $xd_map mapping data
+
+@function xd-export($map, $keys...) {
+    @each $key in $keys {
+      @if map-has-key($map, $key) {
+        $map: map-get($map, $key);
+      }
+      @else {
+        @return null;
+      }
+    }
+    @return $map;
+  }
